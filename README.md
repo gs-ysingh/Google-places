@@ -1,5 +1,4 @@
-# react-hooks
-React hooks examples
+# Google Places app
 
 Important commands:
 
