@@ -1,0 +1,13 @@
+.header {
+  height: 100px;
+  border-bottom: 1px solid silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 700px;
+}
