@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import styles from './Search.module.css';
 import fetchPlaces from '../../libs/fetch-places';
 
-class Search extends Component {
+export class Search extends Component {
   constructor(props) {
     super(props);
     this.handleKeyPress = _.debounce(this.handleKeyPress, 250);

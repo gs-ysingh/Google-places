@@ -20,7 +20,9 @@ const reducer = (state = initialState, action) => {
       return { ...state, results: [], loading: false };
     case actions.SET_LOCATION:
       return { ...state,  map: {
-        position: action.location
+        position: action.data.location,
+        name: action.data.name,
+        title: action.data.title
       }};
     default:
       return state;

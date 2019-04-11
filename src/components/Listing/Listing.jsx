@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import setLocation from '../../libs/setLocation';
 import styles from './Listing.module.css';
 
-const Listing = (props) => {
+export const Listing = (props) => {
   const renderItems = (results) => {
     if(results.length === 0) {
       return <div className={styles.noresults}>No Results found. Please change your filter</div>
@@ -11,7 +11,7 @@ const Listing = (props) => {
     return results.map((res, index) => {
       return (
         <div onClick={(e) => {
-          props.setLocation(res.geometry.location);
+          props.setLocation(res.geometry.location, res.name, res.vicinity);
         }} className={styles.item} key={index}>
           <div className={styles.title}>
             {res.name}
@@ -44,8 +44,8 @@ const mapStateToProps = (state) => {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  setLocation(location) {
-    dispatch(setLocation(location));
+  setLocation(location, name, title) {
+    dispatch(setLocation(location, name, title));
   },
 });
 

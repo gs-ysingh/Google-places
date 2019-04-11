@@ -6,7 +6,7 @@ import GoogleApiWrapper from "../../components/Map/Map.jsx";
 import styles from './Landing.module.css';
 
 
-const Landing = (props) => {
+export const Landing = (props) => {
   const renderImage = () => {
     return (
       <img className={styles.loading} src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif" />
