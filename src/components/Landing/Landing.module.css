@@ -11,3 +11,12 @@
   grid-template-columns: 1fr 2fr;
   height: 700px;
 }
+
+.loading {
+  position: absolute;
+  top: 50%;
+  right: 85%;
+  transform: translate(50%,-50%);
+  background: black;
+  color: white;
+}

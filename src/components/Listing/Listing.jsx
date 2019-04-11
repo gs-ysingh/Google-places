@@ -28,7 +28,7 @@ const Listing = (props) => {
       );
     });
   }
-  
+
   return (
     <div className={styles.listing}>
       {props.results && renderItems(props.results)}
@@ -38,7 +38,8 @@ const Listing = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    results: state.results
+    results: state.results,
+    loading: state.loading,
   };
 }
 
